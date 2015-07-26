@@ -1,0 +1,62 @@
+
+<!DOCKTYPE HTML>
+<HTML>
+	<HEAD>
+		<script id = "vertex-shader" type = "x-shader/x-vertex">
+		attribute vec4	a_Position;
+		void main()
+		{
+			gl_Position = a_Position;
+			gl_PointSize = 10.0;
+		}
+		</script>
+		<script id = "fragment-shader" type ="x-shader/x-fragment">
+		precision mediump float;
+		void main()
+		{
+			gl_FragColor = vec4(1.0, 0.0,0.0, 1.0);
+			
+			
+		}
+		</script>
+		<script type = "text/javascript" src = "webgl-utils.js"> </script>
+		<script type = "text/javascript" src = "initShaders.js"> </script>
+		<script type = "text/javascript" src = "MV.js"> </script>
+		<script type = "text/javascript" src = "mouseDraw.js"> </script>
+	
+	</HEAD>
+	<BODY>             
+		<canvas id ="gl-canvas" width = "512" height = "512">
+		Oops ... your browser does not support html5 canvas element!
+		</canvas>
+			<br/>
+		
+			<label for "pointSize">Enter Point Size  </label>
+			<input id = "pointSize" name = "Point size" placeholder = "1"> </input>
+			<input type = "button" id = "Submit" value = "Submit PointSize" />
+			<input type = "button" id = "Point" value = "Draw Point" />
+			<br>
+			<br>
+			
+			<br/>
+			<input type = "button" id = "line" value = "Draw Line"/>	
+			<br>
+			<br>
+		<input type = "button" id = "triangle" value = "Draw triangle by Selecting three points" />
+		<br>
+			<br>
+		
+		<div> 
+		     This is a work in progress.
+			 Since we onley had a week to get this done I didn't
+			 <br>to implement all this
+			 It does do a line draw but the triangle function and the point function doesn't work
+			 
+			  
+			  
+		</div>
+		
+			
+		
+	</BODY>
+</HTML>
